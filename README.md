@@ -58,7 +58,7 @@ not be build.
 
 **Answer**: dbt run --select models/staging/+
 
-### Q3. dbt Macros and Jinja
+### Q4. dbt Macros and Jinja
 
 **Answer**: 
 

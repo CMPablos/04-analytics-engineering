@@ -24,12 +24,11 @@ dim_zones as (
     where borough != 'Unknown'
 )
 select trips_unioned.tripid,
-    extract(year from pickup_datetime) as year,
-    extract(month from pickup_datetime) as month,
-    extract(quarter from pickup_datetime) as quarter,
-    extract(month from pickup_datetime) as month,
-    CONCAT(cast(extract(year from pickup_datetime) as STRING), 
-        '/Q', cast(extract(quarter from pickup_datetime) as STRING)) as year_quarter,
+    extract(year from trips_unioned.pickup_datetime) as year,
+    extract(quarter from trips_unioned.pickup_datetime) as quarter,
+    extract(month from trips_unioned.pickup_datetime) as month,
+    CONCAT(cast(extract(year from trips_unioned.pickup_datetime) as STRING), 
+        '/Q', cast(extract(quarter from trips_unioned.pickup_datetime) as STRING)) as year_quarter,
     trips_unioned.vendorid, 
     trips_unioned.service_type,
     trips_unioned.ratecodeid, 
