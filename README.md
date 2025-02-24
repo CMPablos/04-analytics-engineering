@@ -66,3 +66,15 @@ not be build.
     - When using core, it materializes in the dataset defined in DBT_BIGQUERY_TARGET_DATASET
     - When using stg, it materializes in the dataset defined in DBT_BIGQUERY_STAGING_DATASET, or defaults to DBT_BIGQUERY_TARGET_DATASET
     - When using staging, it materializes in the dataset defined in DBT_BIGQUERY_STAGING_DATASET, or defaults to DBT_BIGQUERY_TARGET_DATASET
+
+### Q5. Taxi Quarterly Revenue Growth
+
+**Answer**: green: {best: 2020/Q1, worst: 2020/Q2}, yellow: {best: 2020/Q1, worst: 2020/Q2}
+
+### Q6. P97/P95/P90 Taxi Monthly Fare
+
+**Answer**: green: {p97: 40.0, p95: 33.0, p90: 24.5}, yellow: {p97: 31.5, p95: 25.5, p90: 19.0}
+
+### Q7. Top #Nth longest P90 travel time Location for FHV
+
+**Answer**: LaGuardia Airport, Park Slope, Clinton East
