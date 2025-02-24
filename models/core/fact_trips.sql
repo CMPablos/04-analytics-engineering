@@ -4,12 +4,12 @@
     )
 }}
 
-with green_tripdata as (
+with green_taxi_data as (
     select *, 
         'Green' as service_type
     from {{ ref('stg_green_taxi_data') }}
 ), 
-yellow_tripdata as (
+yellow_taxi_data as (
     select *, 
         'Yellow' as service_type
     from {{ ref('stg_yellow_taxi_data') }}
